@@ -1,8 +1,10 @@
+import os
 from flask import Flask, request, jsonify, render_template
 from google import genai
 
 # IMPORTANT: Replace with your NEW Gemini API key
-client = genai.Client(api_key="AIzaSyDqEjqq3ZDsEOckyurXwqqDyLkHNen55QA")
+
+client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 app = Flask(__name__)
 
