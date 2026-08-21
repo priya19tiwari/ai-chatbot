@@ -21,7 +21,7 @@ def chat():
     user_message = data["message"]
 
     response = client.models.generate_content(
-        model="models/gemini-flash-latest",
+        model="gemini-2.5-flash",
         contents= f"""
         Answer in plain text only.
         Do not use *, **, ##, bullets, or markdown.
